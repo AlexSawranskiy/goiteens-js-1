@@ -21,11 +21,11 @@ const text = 'Hello';
 const number = 989;
 const name = 'Sasha';
 
-let c;
-let d;
-let e;
-let f;
-let g;
+let c = '1';
+let d = 3;
+let e = 'Поповніть будь ласка рахунок';
+let f = false;
+let g = 'Навчальний рік 2022 - 2023';
 
 // II частина
 
