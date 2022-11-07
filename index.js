@@ -189,17 +189,17 @@
  * - Метод includes() с тернарним оператором
  */
 
-const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 
-const loginToFind = 'aj4xth3m4n';
+// const loginToFind = 'aj4xth3m4n';
 
-for(let i = 0; i < logins.length; i++){
-    if(logins[i] === loginToFind){
-      console.log(`Користувач ${loginToFind} знайдено.`);
-    } else{
-      console.log(`Користувач не ${loginToFind} знайдено.`);
-    }
-}
+// for(let i = 0; i < logins.length; i++){
+//     if(logins[i] === loginToFind){
+//       console.log(`Користувач ${loginToFind} знайдено.`);
+//     } else{
+//       console.log(`Користувач не ${loginToFind} знайдено.`);
+//     }
+// }
 
 // або
 
@@ -246,26 +246,337 @@ for(let i = 0; i < logins.length; i++){
 
 // const loginToFind = 'aj4xth3m4n';
 
-const message = logins.includes(loginToFind) 
-? `Користувач ${loginToFind} знайдено.` 
-: `Користувач ${loginToFind} не знайдено.`;
+// const message = logins.includes(loginToFind) 
+// ? `Користувач ${loginToFind} знайдено.` 
+// : `Користувач ${loginToFind} не знайдено.`;
 
 // 4
 /*
  * Напиши скрипт який рахує суму елементів двух масивів.
  */
 
-const array1 = [5, 10, 15, 20];
+// const array1 = [5, 10, 15, 20];
 
-const array2 = [10, 20, 30];
+// const array2 = [10, 20, 30];
 
-const array3 = array1.concat(array2);
+// const array3 = array1.concat(array2);
 
+// let total = 0;
+
+// console.log(array3);
+
+// for(const num of array3){
+//    total += num;
+// }
+// console.log(total);
+
+
+
+
+
+
+
+
+// 27.10 ПРАКТИКА
+
+// 1
+
+/*
+ * Напиши скрипт пошуку самого маленького числа в масиві,
+ * при умові, що числа унікальні (не повторюються).
+ */
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//   smallestNumber = number;
+//   }
+// }
+// console.log(smallestNumber);
+
+// 2
+
+/*
+ * Напиши скрипт, який об"єднує всі елементи массива в один рядок.
+ * Елементів може бути довільна кількість.
+ * Нехай елементи массива  в рядку будут розділені комою.
+ * - Спочатку через for
+ * - Потім через join()
+ */
+// I
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+
+// let string = '';
+
+// console.log(friends.join(','));
+
+// // II
+
+// for (const friend of friends) {
+//   string += friend + ','
+// }
+
+// console.log(string);
+
+// Повинно вийти 'Mango,Poly,Kiwi,Ajax'
+
+
+// 3
+
+/*
+ * Напиши скрипт який замінює регістр кожного символа в рядку на протилежний.
+ * Наприклад, якщо рядок «JavaScript», то на виході повинно бути «jAVAsCRIPT».
+ */
+
+// const str = 'JavaScript';
+
+// let reversStr = '';
+
+// const arrStr = str.split('');
+
+// console.log(arrStr);
+
+// for (const letter of arrStr) {
+//    if(letter === letter.toLocaleLowerCase()){
+//     reversStr += letter.toLocalUpperCase();
+//    } else{
+//      reversStr += letter.toLocaleLowerCase();
+//    }
+// }
+
+// console.log(reversStr);
+
+// 4
+
+/*
+ * Робимо slug в URL з назви стратті (приклад на dev.to)
+ * Заголовок статті складається тільки з букв та пропусків
+ *
+ * - Нормалізуємо рядок
+ * - Разбиваємо по словах
+ * - Зшиваємо в рядок з розділителями
+ * - Ченінг
+ */
+
+// Повинно вийти top-10-benefits-of-react-framework
+
+// const title = 'Top 10 benefits of React framework';
+
+// const normalizeTitle = title.toLocaleLowerCase();
+// console.log(normalizeTitle);
+
+// const arrayTitle = title.split(' ');
+// console.log(arrayTitle);
+
+// const slugTitle = arrayTitle.join('-');
+// console.log(slugTitle);
+
+// Простіший варіант
+
+// const slugTitle = title.toLocaleLowerCase().split(' ').join(' ');
+// console.log(slugTitle);
+
+// 5
+
+/*
+ * Працюємо з колекцією карток в trello
+ * - Метод splice()
+ * - Видалити
+ * - Додати
+ * - Оновити
+ */
+
+// const cards = [
+//   'Карточка-1',
+//   'Карточка-2',
+//   'Карточка-3',
+//   'Карточка-4',
+//   'Карточка-5',
+// ];
+
+// console.table(cards);
+
+// const cardToRemove = 'Карточка-3';
+
+// const cardToUpdate = 'Карточка-4';
+
+// const cardToInsert = 'Карточка-6';
+
+
+// /*
+//  * Видалення (по індексу), метод indexOf()
+//  */
+// const index = cards.indexOf(cardToRemove);
+
+// console.log(cards.splice(index, 1));
+
+// console.log(cards);
+
+/*
+ * Додавання (по індексу)
+ */
+// cards.splice(cards.length, 0, cardToInsert);
+
+// console.log(cards);
+// /*
+//  * Оновлення (по індексу)
+//  */
+// cards.splice(0, 1, cardToUpdate);
+
+// console.log(cards);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 31.10 МЕНТОРСЬКА ГОДИНА
+
+// const message = "[SPAM] How to earn fast money?";
+
+// console.log(message.includes('spam'));
+
+// const messageNormalize = message.toLocaleLowerCase();
+
+// console.log(messageNormalize.includes('spam'));
+
+// 2
+
+// const message = "Curabitur ligula sapien";
+
+// const maxlenghts = 16;
+
+// const elementToRemove = massage.length - maxlengts;
+
+// if (massage.length <= maxlengts) {
+//   console.log(message);
+// } else {
+//   const newMassage = massage.split('')
+//   console.log(newMassage);
+  
+//   const cutMassege = newMassafe.splice(maxlengts, elementToRemove, '...');
+//   console.log(cutMassege);
+
+//   const finalMassege = cutMassege.join();
+
+//   console.log(finalMassege);
+// }
+
+
+
+
+
+// 01.11 ФУНКЦІЇ
+
+// Function expression
+const fn = function (num1, num2) {
+  return 555;
+  console.log(num1);
+
+  console.log(num2);
+  const sum = num1 + num2;
+  // тіло функціїї
+  console.log('Код всередині тіла функції', sum);
+}
+
+// fn(10, 20);
+// fn(5, 8);
+// fn(15, 50);
+
+console.log('Результат функції: ', fn(10,20));
+
+// Function declaration
+// getTotalPrice();
+// function getTotalPrice() {
+//   console.log('Код всередині тіла функції getTotalPrice');
+// }
+
+
+
+
+/*
+ * Напиши функцію calculateTotalPrice(items)
+ * яка приймає масив цін і повертає їх сумму
+ */
+
+const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
 let total = 0;
 
-console.log(array3);
-
-for(const num of array3){
-   total += num;
+for (const value of cart) {
+  total += value;
 }
-console.log(total);
+
+console.log('Total: ', total);
+
+const calculateTotalPrice = function (items){
+  console.log(items);
+  let total = 0;
+
+for (const item of items) {
+  total += item;
+}
+return total;
+}
+  
+  console.log(calculateTotalPrice([1, 2, 3])); // 6
+  console.log(calculateTotalPrice([5, 10, 15, 20])); // 50
+  console.log(calculateTotalPrice([100, 200, 300])); // 600
+
+
+  // 2 
+
+//   *
+//  * Напиши функцію logItems(items) для перебора і логування массива
+//  */
+
+ const logItems = function (items) {
+  for (const item of items) {
+    console.log(item);
+  }
+ }
+  
+  logItems(['Mango', 'Kiwi', 'Poly', 'Ajax']);
+  logItems([1, 2, 3, 4, 5]);
+  logItems(['клавиатура', 'наушники', 'часы']);
+
+// 3
+
+/*
+ * Напиши скрипт пошуку логіна
+ * - Якщо логіна немає, вивести повідомлення 'Користувач [логін] не знайдено.'
+ * - Якщо знайшли логін, вивести повідомлення 'Користувач [логін] знайдено.'
+ */
+
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+
+// const loginToFind = 'aj4xth3m4n';
+
+// const message = logins.includes(loginToFind) 
+// ? `Користувач ${loginToFind} знайдено.` 
+// : `Користувач ${loginToFind} не знайдено.`;
+// console.log(message);
+
+const findLogin = function(loginsArray, loginToFind){
+  return loginsArray.includes(loginToFind) 
+  ? `Користувач ${loginToFind} знайдено.`
+  : `Користувач ${loginToFind} не знайдено.`;
+}
+
+console.log(findLogin(logins, 'avocod3r'));
+console.log(findLogin(logins, 'k1widab3st'));
+console.log(findLogin(logins, 'jam4l'));
+console.log(findLogin(logins, 'poly1scute'));

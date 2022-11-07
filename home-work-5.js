@@ -6,7 +6,7 @@ const Arr2 = [true, 2, {}, ['a'], 222];
 
 const arrSum = Ar1[2] + Ar2[2];
 
-consol.log(Arr1[2], Arr2[2])
+consol.log(Arr1[2], Arr2[2]);
 
 // 2
 
