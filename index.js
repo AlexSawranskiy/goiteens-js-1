@@ -497,7 +497,7 @@ const fn = function (num1, num2) {
 // fn(5, 8);
 // fn(15, 50);
 
-console.log('Результат функції: ', fn(10,20));
+// console.log('Результат функції: ', fn(10,20));
 
 // Function declaration
 // getTotalPrice();
@@ -520,10 +520,10 @@ for (const value of cart) {
   total += value;
 }
 
-console.log('Total: ', total);
+// console.log('Total: ', total);
 
 const calculateTotalPrice = function (items){
-  console.log(items);
+  // console.log(items);
   let total = 0;
 
 for (const item of items) {
@@ -532,9 +532,9 @@ for (const item of items) {
 return total;
 }
   
-  console.log(calculateTotalPrice([1, 2, 3])); // 6
-  console.log(calculateTotalPrice([5, 10, 15, 20])); // 50
-  console.log(calculateTotalPrice([100, 200, 300])); // 600
+  // console.log(calculateTotalPrice([1, 2, 3])); // 6
+  // console.log(calculateTotalPrice([5, 10, 15, 20])); // 50
+  // console.log(calculateTotalPrice([100, 200, 300])); // 600
 
 
   // 2 
@@ -545,7 +545,7 @@ return total;
 
  const logItems = function (items) {
   for (const item of items) {
-    console.log(item);
+    // console.log(item);
   }
  }
   
@@ -576,7 +576,257 @@ const findLogin = function(loginsArray, loginToFind){
   : `Користувач ${loginToFind} не знайдено.`;
 }
 
-console.log(findLogin(logins, 'avocod3r'));
-console.log(findLogin(logins, 'k1widab3st'));
-console.log(findLogin(logins, 'jam4l'));
-console.log(findLogin(logins, 'poly1scute'));
+// console.log(findLogin(logins, 'avocod3r'));
+// console.log(findLogin(logins, 'k1widab3st'));
+// console.log(findLogin(logins, 'jam4l'));
+// console.log(findLogin(logins, 'poly1scute'));
+
+
+
+
+
+
+// 08.11
+
+// 1
+
+const changeCase = function (string) {
+  const arrStr = string.split('');
+
+  let reversStr = '';
+
+  for (const letter of arrStr) {
+    if(letter === letter.toLocaleLowerCase()){
+      reversStr = letter.toLocalUpperCase();
+    } else{
+      reversStr += letter.toLocaleLowerCase();
+    }
+  }
+  // console.log(reversStr);
+}
+// console.log(changeCase('qweRTY')); // QWErty
+// console.log(changeCase('mAnGo')); // MaNgO
+// console.log(changeCase('AjAx')); // aJaX
+
+// 2
+
+/*
+ * Напиши функцию slugify(string) яка отримує рядок і повертає URL-slug
+ * Заголовок статті складається тільки з букв та пропусків
+ */
+
+const title = 'Top 10 benefits of React framework';
+const slugTitle = title.toLocaleLowerCase().split(' ').join('-');
+// console.log(slugTitle);
+  
+// console.log(slugify('Top 10 benefits of React framework'));
+// console.log(slugify('Azure Static Web Apps are Awesome'));
+// console.log(slugify('Technical writing tips for non-native English speakers'));
+
+
+// 10.11
+
+// const playlist = {
+//   name: 'Плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+  
+//   changeName(newName) {
+//   // console.log("this: ", this);
+//     this.name = newName;
+//   },
+// addTrack(newTrack){
+//   this.tracks.push(newtruck)
+// }
+  
+
+//  };
+// playlist.addTrack('Трек-4');
+
+// console.log(playlist);
+
+
+
+
+
+
+
+
+
+
+
+
+// 14.11 МЕНТОРСЬКА ГОДИНА
+
+// 1. Створи пустий об'єкт user. Додай в об'єкт властивість userName зі своїм іменем. Додай в об'єкт властивість age зі своїм віком. Додай в об'єкт метод showUserName, який виводить твоє ім'я. Додай в об'єкт метод updateAge, який додає під час виклику до твоєго віку
+
+const user = {
+
+}
+
+user.userName = 'Sasha';
+
+// console.log(user);
+
+user.age = 17;
+
+// console.log(user);
+
+// 3. Створіть об'єкт calculator з трьома методами:
+
+// read(a, b) - запитує у користувача два числових значення і зберігає їх як властивості об'єкта.
+// sum() - повертає суму збережених значень.
+// mult() - повертає добуток збережених значень.
+
+const calculator = {
+  read(a,b){
+    this.num1 = a;
+    this.num2 = b;
+    console.log(calculator);
+  },
+     sum(){
+      return this.num1 + this.num2;
+     }
+}
+// calculator(3, 5);
+// console.log(calculator.sum);
+
+
+
+// 20.11
+
+// I РОЗПОРОШЕННЯ
+
+const numbers = [1, 6, 8, 10, 54, 3].concat([5,4], [63, 11]);
+const arr1 = [5,4];
+const arr2 = [63,11];
+// Синтаксис написання SPREAD;
+const numbers1 = [1, 6, 8, 10, 54, 3, ...[5,4], ...[63, 11]];
+
+// console.log(numbers);
+
+// console.log(numbers1);
+
+// 
+
+// Пошук найнижчої або найвищої температури (числа)
+
+const temps = [18, 14, 12, 21, 17, 29, 24];
+
+const lowestTemp = Math.min(...temps)
+const hightTemp = Math.max(...temps)
+
+// console.log(lowestTemp);
+// console.log(hightTemp);
+
+// 
+
+// const a = [
+//   { x: 1}, 
+//   { y: 2}, 
+//   { z: 3}
+// ];
+// const b = [...a];
+
+// console.log('a: ', a);
+// console.log('b: ', b);
+
+// 
+
+const lastWeekTemps = [1, 2, 3];
+const currentTemps = [4, 5, 6];
+const nextWeekTemps = [7, 8, 9];
+  
+// const allTemps = lastWeekTemps.concat(currentTemps, nextWeekTemps);
+
+const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
+
+// console.log(allTemps);
+
+// 
+
+// Розпорошення об'єкта методом .assign
+const a = { x: 1, y: 2};
+const b = { x: 0, z: 3};
+
+const c = Object.assign({}, a , b);
+
+// console.log(c);
+
+const defaultSettings = {
+  theme: 'light',
+  showNofications: true,
+  hideSidebar: false,
+};
+
+const userSettings = {
+  showNofications: false,
+  hideSidebar: true,
+}
+
+const finalSettings = {
+  ...defaultSettings,
+  ...userSettings
+}
+
+// console.log(finalSettings);
+
+// 
+
+// II ДЕСТРУКТУРИЗАЦІЯ
+
+const playlist = {
+  name: 'Мій супер плей - лист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  tracCount: 3,
+};
+
+console.log(
+  playlist.name,
+  playlist.rating,
+  playlist.tracks,
+  playlist.tracCount
+);
+
+const { name, rating, tracks, trackCount, author = 'gfgdfsd'} = playlist;
+
+console.log(
+  name,
+  rating,
+  tracks,
+  trackCount,
+  author
+);
+
+
+const friends = [
+  { name: 'Mango', online: true },
+  { name: 'Kiwi', online: true },
+  { name: 'Poly', online: false },
+  { name: 'Ajax', online: false },
+];
+
+console.table(friends);
+/*
+ * Отримуємо імена тільки тих друзів які онлайн
+ */
+const getOnlineFriends = function (allFriends) {
+   const friendOnline = [];
+   for (const friend of allFriends) {
+     if(friend.online){
+      friendOnline.push(friend.name)
+     }
+   }
+   return friendOnline;
+}
+console.log(getOnlineFriends(friends));
+
+
+
+
+
+
+
+
+

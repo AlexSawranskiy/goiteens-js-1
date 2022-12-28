@@ -5,14 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <button class="button" data-action="open-modal">Відкрити модалку</button>
+
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <h2>Modal window</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, reiciendis!
+      </p>
+      <button type="button" class="button" data-action="close-modal">
+        Закрити
+      </button>
+    </div>
+  </div>
+  <div id="counter">
+    <button type="button" data-action="decrement">-1</button>
+    <span id="value">0</span>
+    <button type="button" data-action="increment">+1</button>
+  </div>
+  <script src="./home-work-8.js" type="module"></script>
+  <!-- <script src="./Control.js" type="module"></script> -->
+ <!-- <script src="./Dom.js" type="module"></script> -->
     <!-- <script src="./index.js" type="module"></script> -->
     <!-- <script src="./home-work-1.js" type="module"></script> -->
     <!-- <script src="./home-work-2.js" type="module"></script> -->
     <!-- <script src="./home-work-3.js" type="module"></script> -->
     <!-- <script src="./home-work-4.js" type="module"></script> -->
     <!-- <script src="./home-work-5.js" type="module"></script> -->
-    <script src="./home-work-6.js" type="module"></script>
+    <!-- <script src="./home-work-6.js" type="module"></script> -->
 </body> 
 </html>
