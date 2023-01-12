@@ -311,6 +311,66 @@ function onBackdropClose(event) {
   }
 }
 
+// 03.01
+
+function Car (model, price, year, color){
+  this.model = model;
+  this.price = price;
+  this.year = year;
+  this.color = color;
+}
+
+
+
+// const carInstance = new Car();
+const audi = new Car('A5', 40000, 2020, 'black');
+console.log(audi);
+
+
+const mazda = new Car('mazda-3', 35000, 2022, 'red');
+console.log(mazda);
+
+
+
+
+
+
+
+
+// 
+
+function Client(name, age, date) {
+  this.name = name;
+  this.age = age;
+  this.date = date;
+}
+Client.prototype.changeDate = function (newDate) {
+  this.name = newDate;
+}
+
+const adam = new Client('Adam', 35, '07.11');
+console.log(adam);
+const alex = new Client('Alex', 41, '03.04');
+console.log(alex);
+console.log(Client.name);
+
+// 
+
+class Client {
+  constructor(name, age, date){
+    this.name = name;
+    this.age = age;
+    this._date = date;
+  }
+  get date(){
+    this._date;
+  }
+  set date(newDate){
+    this._date = newDate;
+  }
+}
+
+
 
 
 

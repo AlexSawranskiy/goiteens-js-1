@@ -1,0 +1,65 @@
+.hero-section{
+    width: 1440px;
+    height: 800px;
+    background: rgba(0, 0, 0, 0.17);
+    margin: auto;
+    background-image: url(../Rectangle\ 5.png);
+}
+p{
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+padding-left: 150px;
+width: 356px;
+color: #000000;
+
+}
+h1{
+padding: 76px 150px;
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 40px;
+color: #000000;
+padding-bottom: 0;
+}
+button{
+    display: block;
+    margin-left: 1035px;
+    margin-top: 464px;
+
+    font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+color: #000000;
+background: #FFFFFF;
+border-radius: 12px;
+border: none;
+padding: 15px 30px;
+}
+
+.last-image{
+    display: block;
+    position: absolute;
+    top: 351px;
+    padding-left: 15px;
+}
+
+.last-image:hover{
+    display: block;
+    fill: aqua;
+}
+
+.next-image{
+    display: block;
+    position: absolute;
+    top: 351px;
+    padding-left: 1352px;
+}
+
+
